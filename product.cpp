@@ -116,7 +116,7 @@ class Product {
         
         void sale(int saleQuantity) {
             isAvailable();
-            if(saleQuantity > stockQuantity) cout << "Ko du de ban";
+            if(saleQuantity > stockQuantity) exit(0); //Ko du de ban
             else cout << "SUCCESS !!! \n";
             stockQuantity -= saleQuantity;
             cout << "San pham con lai trong kho: " << getStockQuantity();
