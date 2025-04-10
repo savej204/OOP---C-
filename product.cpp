@@ -19,6 +19,15 @@ class Product {
             int stockQuantity ;
         }
 
+        ~Product() {
+            string product ;
+            string name ;
+            string description ;
+            string category ;
+            double unitPrice ;
+            int stockQuantity ;
+        }
+
         Product(string sp, string ten, string mt, string dm, double price, int num) {
             this -> product = sp;
             this -> name = ten;
@@ -36,8 +45,6 @@ class Product {
             this -> unitPrice = prd.unitPrice;
             this -> stockQuantity = prd.stockQuantity;
         }
-
-        //Product -> Destructor
 
         void input() {
             cout << "Ma san pham: "; cin >> product;
