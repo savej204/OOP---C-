@@ -47,11 +47,11 @@ class Employee {
         }
 
         void input() {
-            cout << "Ma nhan vien: "; setEmployee(); //cin >> employeeId;
-            cout << "Ho ten: "; cin >> fullName;
-            cout << "Phong ban lam viec: "; cin >> department;
-            cout << "Chuc vu: "; cin >> position; 
-            cout << "Ngay lam: "; cin >> hireDate;
+            cout << "Ma nhan vien: "; setEmployee();
+            cout << "Ho ten: "; getline(cin,fullName);
+            cout << "Phong ban lam viec: "; getline(cin,department);
+            cout << "Chuc vu: "; getline(cin,position); 
+            cout << "Ngay lam: "; getline(cin,hireDate);
             cout << "Muc luong co ban: "; setSalary();
         }
 
@@ -81,17 +81,17 @@ class Employee {
 
         void setEmployee() {
             string employeeId; 
-            cin >> employeeId;
+            getline(cin,employeeId);
             this -> employeeId = employeeId;
             for(int i = 0; i < employeeId.size(); i++) {
                 if(i < 2) {
                     while (isdigit(employeeId[i]) || employeeId[i] != toupper(employeeId[i])) {
-                        cout << "Sai dinh dang. Nhap lai: "; cin >> employeeId;
+                        cout << "Sai dinh dang. Nhap lai: "; getline(cin,employeeId);
                     }
                 }
                 if(i >= 2) {
                     while (isalpha(employeeId[i])) {
-                        cout << "Sai dinh dang. Nhap lai: "; cin >> employeeId;
+                        cout << "Sai dinh dang. Nhap lai: "; getline(cin,employeeId);
                     }
                 }
             }
