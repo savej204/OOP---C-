@@ -47,10 +47,10 @@ class Product {
         }
 
         void input() {
-            cout << "Ma san pham: "; cin >> product;
-            cout << "Ten san pham: "; cin >> name;
-            cout << "Mo ta san pham: "; cin >> description;
-            cout << "Danh muc san pham: "; cin >> category; 
+            cout << "Ma san pham: "; getline(cin,product);
+            cout << "Ten san pham: "; getline(cin,name);
+            cout << "Mo ta san pham: "; getline(cin,description);
+            cout << "Danh muc san pham: "; getline(cin,category); 
             cout << "Don gia: "; setUnitPrice();
             cout << "So luong ton kho: "; cin >> stockQuantity;
         }
